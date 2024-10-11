@@ -26,6 +26,19 @@
             font-size: 1.2em;
             color: #333;
         }
+        .call-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+        }
+        .call-button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -34,6 +47,18 @@
         <img src="dog.jpg" alt="A picture of my dog">
         <p>This is Pumpkin, our family dog. She's full of energy and loves to play and run.</p>
         <p>If you found her, please contact me using the number on the otherside of the dog tag.</p>
+        <!-- Call me button -->
+        <a id="phone-link" class="call-button">Call Me</a>
     </div>
+
+    <script>
+        // JavaScript to create the phone number dynamically
+        const phoneLink = document.getElementById('phone-link');
+        const number = '571'; // First part of your number
+        const middle = '290'; // Middle part of your number
+        const last = '1301'; // Last part of your number
+        phoneLink.href = 'tel:' + number + middle + last;
+        phoneLink.textContent = 'Call Me at ' + number + '-' + middle + '-' + last;
+    </script>
 </body>
 </html>
